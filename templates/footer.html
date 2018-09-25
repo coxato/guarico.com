@@ -1,0 +1,28 @@
+<footer class="footer_for_all">
+<div class="footer_container">
+	{% load static %}
+				<div class="logo">
+				<img src="{% static 'images/logo2.png' %}" alt="emblema de guarico">
+				</div>
+	<div class="izquierda_footer">
+		
+		<ul>
+			<a target="_blank" href="https://es.wikipedia.org/wiki/Estado_Gu%C3%A1rico"><li>aprenda más de Guárico</li></a>
+			<a target="_blank" href="https://goo.gl/maps/CnpEkVW7Z2U2"><li>explorar Venezuela</li></a>
+			<a target="_blank" href="https://youtu.be/F6CeeRDntJk"><li>música de Guárico</li></a>
+		</ul>
+	</div>
+	<div class="derecha_footer">
+		<ul>
+			<a target="_blank" href="{% url 'about' %}"><li>¿cómo se realizó éste sitio web?</li></a>
+			<a target="_blank" href=""><li>código en github</li></a>
+			<a target="_blank" href="{% url 'about' %}#me"><li>¿Quién hizo éste sitio web?</li></a>		
+		</ul>
+	</div>
+	<div class="copy_container">
+		<div class="copyright_footer">
+			<p><a href="{% url 'guarico' %}">Guárico.com</a> 2018 hecho con una canaimita</p>
+		</div>
+	</div>
+</div>
+</footer>

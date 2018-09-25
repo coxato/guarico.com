@@ -1,0 +1,359 @@
+.tituloHistory,
+.ciudadesVisit,
+.tituloParquesTuristicos,
+.titulo_ubicacion {
+  text-align: center;
+  padding: 15px 10px 10px 10px;
+  font-size: 2.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.cabezera {
+  position: fixed;
+  font-family: arial;
+  width: 100%;
+  z-index: 199;
+  height: auto;
+  border-bottom: black 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(128, 128, 128, 0.5); }
+
+nav {
+  width: 90%;
+  margin: 0 3%; }
+
+.icon-menu {
+  position: fixed;
+  z-index: 999;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  transition: .3s;
+  border-radius: 50%;
+  background-image: url("../images/burguerButton2.png");
+  background-size: cover;
+  background-color: white;
+  display: none; }
+
+.menuPrincipal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; }
+
+.menuPrincipal a {
+  text-decoration: none;
+  padding: 14px 3px;
+  width: 100%;
+  font-size: 19px;
+  font-weight: bold;
+  color: #d4d4d4;
+  text-align: center;
+  transition: .3s; }
+
+.menuPrincipal a:hover {
+  color: white; }
+
+@media screen and (max-width: 620px) {
+  .icon-menu {
+    display: block; }
+    .icon-menu:hover {
+      border-radius: 50%;
+      transform: scale(1.02); }
+  .cabezera {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+    transition: .4s;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0; }
+    .cabezera.active {
+      left: 0; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  .menuPrincipal {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: center; }
+    .menuPrincipal a {
+      border-bottom: 2px solid blue;
+      width: 100%; }
+      .menuPrincipal a:first-child {
+        border-top: 2px solid blue; }
+  /*.logo {*/
+    /*display: none; } */
+  }
+    .logo{
+      height: 40px;
+      width: 250px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .logo img{
+      width: 100%;
+    }
+
+.portada_ciudad {
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.overlay_portada_ciudad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.descripcion_portada_ciudad {
+  color: white;
+  font-family: helvetica;
+  text-align: center; }
+
+.descripcion_portada_ciudad p {
+  font-size: 1.2em; }
+
+.descripcion_portada_ciudad h1 {
+  font-size: 2.5em; }
+
+.superiorHistory {
+  width: 100%;
+  background-color: #ebebeb; }
+
+.history {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  grid-gap: 15px;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2em;
+  margin: 0 40px;
+  padding: 20px 10px;
+  font-family: helvetica; }
+
+.history img {
+  width: 100%;
+  vertical-align: top; }
+
+@media screen and (max-width: 768px) {
+  .history {
+    grid-template-columns: 1fr;
+    margin: 0 20px; } }
+
+.ciudadesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px 22px;
+  padding: 15px;
+  align-items: center;
+  justify-items: center; }
+  .ciudadesGrid img {
+    width: 100%;
+    vertical-align: top;
+    cursor: pointer;
+    border-radius: 5px; }
+
+.ciudad__item {
+  position: relative;
+  transition: .4s;
+  border-radius: 5px; }
+
+.overlay {
+  display: flex;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: .4s;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer; }
+
+.ciudad__item:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 4px 13px 0px; }
+
+.ciudad__item:hover .overlay {
+  visibility: hidden;
+  opacity: 0; }
+
+@media screen and (max-width: 768px) {
+  .ciudadesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 410px) {
+  .ciudadesGrid {
+    grid-template-columns: 1fr; } }
+
+* {
+  margin: 0; }
+
+.sectionUltraTabs {
+  background: #ebebeb;
+  padding-bottom: 30px; }
+
+.contenedorSuperiorTabs {
+  width: 90%;
+  margin: 1em auto 0 auto; }
+
+.tabs {
+  list-style: none;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  top: 2px; }
+  .tabs__item {
+    padding: 14px 1em;
+    border: 1px solid black;
+    border-bottom: none;
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+    background: #abc9ff;
+    height: 20px; }
+    .tabs__item.active {
+      background: #87a7a7;;
+      z-index: 20; }
+
+.descripcionParque {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.panel {
+  border: 1px solid black;
+  padding: 1.5em;
+  position: relative;
+  z-index: 10;
+  background: #87a7a7; }
+  .panel p {
+    font-family: arial;
+    font-size: 1.2em; }
+  .panel__item, .panel__item img {
+    display: none; }
+    .panel__item.active, .panel__item img.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 14px;
+      position: relative;
+      left: 0; }
+      .panel__item.active img, .panel__item img.active img {
+        display: block; }
+
+.panel img {
+  width: 100%;
+  transition: .3s;
+  will-change: transform; }
+
+.panel img:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 1px 10px 3px; }
+
+@media screen and (max-width: 600px) {
+  .contenedorSuperior {
+    width: 95%; }
+  .panel__item.active {
+    grid-template-columns: 1fr; } }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 47.25%;
+  position: relative;
+  height: 0; }
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.footer_for_all {
+  background: grey; }
+
+.footer_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "loguito izquierda derecha"
+ "copy copy copy";
+ align-items: center;
+  justify-items: center; }
+
+.izquierda_footer, .derecha_footer {
+  font-size: 1.3em;
+  padding: 31px 0 42px 0; }
+  .izquierda_footer ul, .derecha_footer ul {
+    list-style: none; }
+  .izquierda_footer a, .derecha_footer a {
+    text-decoration: none;
+    color: aliceblue; }
+  .izquierda_footer a:hover, .derecha_footer a:hover {
+    text-decoration: underline;
+    color: #003a73; }
+
+
+.logo{
+  grid-area: loguito;
+}
+
+.izquierda_footer {
+  grid-area: izquierda; }
+
+.derecha_footer {
+  grid-area: derecha; }
+
+.copy_container {
+  background: black;
+  grid-area: copy;
+  width: 100%;
+  color: white;
+  padding: 10px 0; }
+
+.copyright_footer {
+  text-align: center; }
+
+@media screen and (max-width: 670px) {
+    .footer_container{
+      grid-template-columns: 1fr;
+      grid-template-areas: "loguito"
+                           "izquierda"
+                           "derecha"
+                           "copy";
+      border: 2px solid red;
+    }
+
+  }

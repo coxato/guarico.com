@@ -1,0 +1,33 @@
+//  contenedor para el background color
+.superiorHistory{
+    width: 100%;
+    background-color: $superLightGrey;
+}
+ 
+//  display grid 
+ .history{
+     display: grid;
+     grid-template-columns: repeat(2,minmax(320px,1fr));
+     grid-gap: 15px;
+     align-items: center;
+     justify-items: center;
+     font-size: $p;
+     margin: 0 40px;
+     padding: 20px 10px;
+     font-family: $fuente1;
+ }
+
+
+ .history img{
+     width: 100%; 
+     vertical-align: top;
+ }
+
+ //                        media query
+ @media screen and (max-width: 768px){
+     .history {
+         grid-template-columns: 1fr;
+         margin: 0 20px;
+     
+     } 
+}

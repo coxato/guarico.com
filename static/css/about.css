@@ -1,0 +1,24 @@
+.super_cont_about{
+	background: #f3f3f3;
+}
+.container_about{
+	margin: 0 auto;
+	width: 80%;
+	padding: 35px 0;
+}
+.container_about h1{
+	font-weight: bold;
+	font-family: helvetica;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.container_about h3{
+	font-size: 23px;
+	font-family: arial;
+}
+.container_about p{
+	font-family: arial;
+	margin-bottom: 13px;
+}
+

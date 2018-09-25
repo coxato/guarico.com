@@ -1,0 +1,84 @@
+.ciudadesGrid{
+    // border: solid red 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px 22px;
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    // grid-template-areas: "ciudad-1 ciudad-2 ciudad-3"
+    //                      "ciudad-4 ciudad-5 ciudad-6"
+    //                      ". ciudad-7 .";
+
+    
+    & img{
+        width: 100%;
+        vertical-align: top;
+        cursor: pointer;
+        border-radius: 5px; 
+    }
+}  
+
+.ciudad__item{
+    position: relative;
+    transition: .4s;
+    border-radius: 5px;
+    // grid-area: 
+}
+
+.overlay{
+    display: flex;
+    font-family: $fuente1;
+    font-weight: bold;
+    font-size: $p;
+    transition: .4s;
+    color: black;
+    background: $lightWhite;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.ciudad__item:hover{
+    transform: scale(1.01);
+    box-shadow: 3px 4px 13px 0px; 
+}
+
+.ciudad__item:hover .overlay{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+// @for $i from 1 to 8 {
+//     .ciudad-#{$i}{
+//         grid-area: ciudad-#{$i};
+//     }
+// }
+
+@media screen and (max-width: 768px){
+    .ciudadesGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        // grid-template-areas: "ciudad-1 ciudad-2" "ciudad-3 ciudad-4" "ciudad-5 ciudad-6" "ciudad-7";
+        }
+        // @for $i from 1 to 8 {
+        //     .ciudad-#{$i}{
+        //         grid-area: ciudad-#{$i};
+        //     }
+        // }
+                                 
+}
+
+@media screen and (max-width: 410px){
+    .ciudadesGrid{
+        grid-template-columns: 1fr;
+    }
+}

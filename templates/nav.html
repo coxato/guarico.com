@@ -1,0 +1,18 @@
+<!--header y  boton para movil -->
+	<header class="cabezera" id="header">
+		
+		<div class="logo">
+			{% load static %}
+			<a href="/"><img src="{% static 'images/logo2.png' %}" alt="guarico"></a>
+		</div>
+		
+		<nav>
+			<ul class="menuPrincipal">
+				<a href="{% url 'guarico' %}#visitar_ciudades"><li>ciudades</li></a>
+				<a href="{% url 'guarico' %}#lugares"><li>lugares</li></a>
+				<a href="{% url 'gastronomia' %}"><li>gastronomia</li></a>
+				<a href="{% url 'festividades' %}"><li>festividades</li></a>
+			</ul>
+		</nav>
+	</header>
+	<span onclick="show()" class="icon-menu" id="burguerButton"></span>

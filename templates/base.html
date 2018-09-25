@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--bloque para el title_html-->
+	{% block title_contenido %}
+	{% endblock %}
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/portada.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<style>
+		
+		.descripcion{
+			color: white;
+			font-family: helvetica;
+		}
+		.descripcion h1{
+			font-size: 2.5em;
+		}
+		.descripcion p{
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+
+
+					<!--body-->
+<body>
+					<!--menu de navegación-->
+
+				{% include "nav.html" %}
+
+	<div class="template_base_body_container">
+		{% block body_contenido %}
+		{% endblock %}
+	</div>
+
+
+						<!--footer-->
+			{% include "footer.html" %}
+
+	{% load static %}
+	<script src="{% static 'js/headerMobile.js' %}"></script>
+
+</body>
+</html>

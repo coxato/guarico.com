@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title_contenido %}
+<title>cómo se construyó éste sitio web?</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+	{% endblock %}
+
+{% block body_contenido %}
+<div style="width: 100%;height: 51px; background-color: #f3f3f3;"></div>
+<div class="super_cont_about">
+<div class="container_about">
+	<h1>Porqué Guárico?</h1>
+	<p>bien, primero que nada hola, yo soy Carlos mucho gusto, ya me presentaré mejor más adelante.</p>
+	<p>Porqué realizé éste sitio? bueno más que nada fué para practicar lo que he ido aprendiendo de desarrollo web, además practicar un poco de JavaScript y python, si python para el backend. Además de ello escogí el tema del estado Guárico porque no hay mucho contenido de éste, tan solo wikipedia y uno que otro blogspot informativo</p>
+
+	<h1>Vamos al grano... qué utilizé??</h1>
+	<p>para el <b>frontend</b> solo usé <b>html ,css y js</b> no usé ninguna librería como reactjs,vue.js o jquery en el frontend por ahora ya que aún no las he aprendido, primero aprender bien las bases para que luego sea más facil comprender y manejar un framework</p>
+	<p>ahora, si te fijas hay un <b>menú</b> y un <b>footer</b> en todas las páginas del sitio <i>como cualquier web</i>.En ésta parte si utilizo un framework llamado <b>Django</b> el lenguaje de programación de este framework es <b>python</b>, pude haber usado <b>PHP</b> pero ya que estaba aprendiendo python me decidi por aprender Django, el cual me es muy útil para definir los importantes <b>templates</b> y las <b>url's</b> me faltó solo incluir modelos para poder interactuar con bases de datos para hacer cosas como por ejemplo: que tú puedas subir una ciudad y su descripción etc.Pero el objetivo principal de ésta web era practicar el diseño</p>
+
+	<h1>Vamos con codigo</h1>
+	<p>Para hacer el <a target="_blank" href="{% url 'guarico' %}">efecto de la portada</a> se hace básicamente con javascript. Es cuestion de poner y quitar clases a los <b>divs</b> que contienen los <b>background-image</b>, como todos están en <b>position: absolute;</b> sólo se verá el div que contenga una clase en especifico</p>
+	<p>aquí esta el codigo <a href="">html</a> , <a href="">css</a> <a href="">js</a> usado en la portada</p>
+
+	<h3>La parte de <a target="_blank" href="{% url 'gastronomia' %}">la gastronomía</a></h3>
+	<p>la he hecho con una propiedad css especial de los <b>background</b> llamada <b>background-attachment: fixed;</b> ésta permite el efecto de que la imagen se quede "pegada" en el fondo</p>
+	<p>aquí esta el codigo <a href="">html</a> , <a href="">css</a> usado en la <a target="_blank" href="{% url 'gastronomia' %}">gastronomía</a></p>
+
+	<h3>y por ultimo pero no menos importante el <a target="_blank" href="{% url 'festividades' %}">efecto de cartas</a></h3>
+	<p>transiciones y transformaciones, eso es todo lo que se necesita para hacer ese <a target="_blank" href="{% url 'festividades' %}">efecto</a> eso y una propiedad css muy útil llamada backface-visibility con su valor <b>backface-visibility: hidden;</b></p>
+	<p>aquí el codigo <a href="">html</a>, <a href="">css</a></p>
+
+	<h3>si quieres ver todo el codigo <a href="">aquí</a> lo puedes ver en github</h3>
+
+	<h1 id="me">acerca de mi</h1>
+	<p>hola!, soy Carlos Martínez y soy un autodidacta, realizé éste sitio web para practicar lo aprendido en los últimos meses</p>
+	<p>creo que ya adivinaste de donde soy pero por si acaso te digo, soy de Venezuela y vivo en un lugar llamado Valle de La Pascua</p>
+	<p>la verdad no queda mucho que decir por ahora pero si me falta mucho por hacer, ésta web será una de muchas que estarán en mi portafolio el cual está en proceso de creación</p>
+	<p>si quieres decirme algo acerca del sitio que se pueda mejorar o tienes alguna otra sugerencia me puedes mandar un correo a <a href="mailto:carlosmandolina@gmail.com">carlosmandolina@gmail.com</a></p>
+
+</div>
+</div>
+{% endblock %}

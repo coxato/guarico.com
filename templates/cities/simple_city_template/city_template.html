@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title_contenido %}
+	<title>Valle de La Pascua</title>
+{% endblock %}
+
+{% block body_contenido %}
+	<div class="portada_ciudad" 
+	style="background-image: url({{ciudad_context.image_portada}});">
+		<div class="overlay_portada_ciudad">
+			<div class="descripcion_portada_ciudad">
+				<h1>{{ciudad_context.name}}</h1>
+				<p>{{ciudad_context.apodo}}</p>
+			</div>
+		</div>
+	</div>
+<div class="superiorHistory">
+		
+		<!-- titulo de la historia de la ciudad -->
+		<h1 class="tituloHistory">acerca de {{ciudad_context.name}}</h1>
+		
+		<section class="history">
+			<div class="historiaCiudad">
+				<p>{{ciudad_context.historical_description}}</p>
+			</div>
+			<figure class="contenedorImagenMapa">
+				
+				<img src="{{ciudad_context.image}}" alt="{{ciudad_context.name}}">
+				
+			</figure>
+		</section>
+	</div>
+
+	{% include "cities/mapa.html" %}
+
+{% endblock %}

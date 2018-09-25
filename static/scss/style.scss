@@ -1,0 +1,26 @@
+@import "lib/variables";
+
+// parrafos, ect
+@import "base/fonts"; 
+
+// menu de navegacion
+@import "layout/header"; 
+ 
+
+// portada individual de la ciudad
+@import "layout/portadaDeCiudades";   
+
+// descripcion de la ciudad
+@import "layout/history";  
+
+//ciudades
+@import "layout/ciudades";
+ 
+//tabs para lugares turisticos
+@import "layout/tabs";   
+
+//mapa google maps
+@import "layout/mapa"; 
+   
+//footer
+@import "layout/footer"; 

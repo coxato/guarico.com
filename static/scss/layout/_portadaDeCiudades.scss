@@ -1,0 +1,37 @@
+//estilo para la portada individual de cada ciudad
+.portada_ciudad{
+	height: 450px;   
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.overlay_portada_ciudad{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0; 
+	background-color: rgba(0,0,0,.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.descripcion_portada_ciudad{
+	color: white;
+	font-family: $fuente1;
+	text-align: center;
+}
+
+.descripcion_portada_ciudad p{
+	font-size: $p;
+}
+
+.descripcion_portada_ciudad h1{
+	font-size: $h1;
+}
+

@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+
+{% block title_contenido %}
+<title>guarico is a state</title>
+{% endblock  %}
+
+{% block body_contenido %}
+
+	<!-- aqui empieza el codigo de la portada -->
+	<!-- ======================================== -->
+	<section class="portada">
+		{% load static %}
+		<div class="lugar actual"
+		style="background-image: 
+		url('{% static 'images/cities/guarico.jpeg' %}');">
+			<div class="descripcion">
+				<h1>Guárico</h1>	
+				<!-- 1 estado -->
+				<p>El mejor estado</p>
+			</div>
+		</div>
+
+		
+		<div class="lugar"
+		style="background-image: 
+		url('{% static 'images/cities/pascua.jpg' %}');">
+			<div class="descripcion">
+									<!-- 2 pascua -->
+				<h1>Valle de la Pascua</h1>
+				<p>La princesa del llano</p>
+			</div>
+		</div>
+
+		<div class="lugar" style="background-image: 
+		url('{% static 'images/cities/zaraza.jpg' %}');">
+									<!-- 3 zaraza -->
+			<div class="descripcion">
+				<h1>zaraza</h1>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="lugar" style="background-image: 
+		url('{% static 'images/cities/tucupido.jpg' %}');">
+			<div class="descripcion">
+									<!-- 4 tucupido -->
+				<h1>Tucupido</h1>
+				<p>El granero del Guárico</p>
+			</div>
+		</div>
+
+		<div class="lugar" style="background-image: 
+		url('{% static 'images/cities/mercedes.jpg' %}');">
+			<div class="descripcion">
+									<!-- 5 mercedes -->
+				<h1>Las mercedes del llano</h1>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="lugar" style="background-image: 
+		url('{% static 'images/cities/altagracia.jpg' %}');">
+			<div class="descripcion">
+										<!-- 6 Altagracia -->
+				<h1>Altagracia de Orituco</h1>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="lugar">
+			<div class="descripcion" style="background-image: 
+		url('{% static 'images/cities/sanJuan2.jpg' %}');">
+									<!-- 7 san juan -->
+				<h1>San Juan de los Morros</h1>
+				<p>Capital de Guárico</p>
+			</div>
+		</div>
+
+		<div class="lugar" style="background-image: 
+		url('{% static 'images/cities/calabozo.jpg' %}');">
+			<div class="descripcion">
+								<!-- 8 calabozo -->
+				<h1>Calabozo</h1>
+				<p></p>
+			</div>
+		</div>
+
+
+
+		<a class="previous" onclick="previous()">&#10094;</a>
+		<a class="next" onclick="next()">&#10095;</a>
+		<div class="circulos">
+			<span class="dot activo" onclick="mostrar(0)"></span>
+			<span class="dot" onclick="mostrar(1)"></span>
+			<span class="dot" onclick="mostrar(2)"></span>
+			<span class="dot" onclick="mostrar(3)"></span>
+			<span class="dot" onclick="mostrar(4)"></span>
+			<span class="dot" onclick="mostrar(5)"></span>
+			<span class="dot" onclick="mostrar(6)"></span>
+			<span class="dot" onclick="mostrar(7)"></span>
+	
+		</div>
+	</section>
+
+	<!-- aqui termina el codigo de la portada -->
+	<!-- ======================================== -->
+	<!-- ======================================== -->
+
+	<!-- contenedor para el background de history -->
+	<div class="superiorHistory">
+		
+		<!-- titulo de la historia de la ciudad -->
+		<h1 class="tituloHistory">acerca de <span id="titleHistory"></span></h1>
+		
+		<section class="history">
+			<div class="historiaCiudad">
+				<p>&nbsp;&nbsp; <b>Guárico</b> es uno de los veintitrés estados que, junto con el Distrito Capital y las Dependencias Federales, forman la República Bolivariana de Venezuela. Su capital es <b>San Juan de Los Morros</b> y su ciudad más poblada es <b>Calabozo</b> .<br> <br>Su fundación fué el 11 de febrero de 1848.</p>
+				<p> <br> &nbsp;&nbsp;Posee 15 municipios autónomos y 39 parroquias civiles. Sus principales ciudades son: <b>San Juan de Los Morros, Calabozo, Valle de la Pascua, Zaraza y Altagracia de Orituco. </b> </p>
+			</div>
+			<figure class="contenedorImagenMapa">
+				{% load static %}
+				<img src="{% static 'images/catedrales/catredralSanJuan.jpg' %}" alt="catedral de San Juan de los Morros">
+			</figure>
+		</section>
+	</div>
+
+			<!-- seccion de las ciudades ############### -->
+
+			<div class="visitar_las_ciudades" id="visitar_ciudades"></div>
+			<!--ver como optimizar-->
+		<h1 class="ciudadesVisit">Visita sus principales ciudades</h1>
+		<section class="ciudadesGrid">
+		{% load static %}
+
+			<div class="ciudad__item ciudad-1">
+			<a href="{% url 'mercedes' %}">
+		<img src="{% static 'images/cities/mercedes.jpg' %}" 
+				alt="mercedes del llano">
+					<div class="overlay">
+						<p>Las Mercedes</p>
+					</div>
+			</a>
+			</div>
+
+			<div class="ciudad__item ciudad-2">
+				<a href="{% url 'pascua' %}">
+				<img src="{% static 'images/cities/pascua.jpg' %}" alt="Valle de la Pascua">
+					<div class="overlay">
+						<p>La Pascua</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="ciudad__item ciudad-3">
+				<a href="{% url 'SanJuan' %}">
+					
+				<img src="{% static 'images/cities/sanJuan2.jpg' %}" alt="San juan de los Morros">
+					<div class="overlay">
+						<p>San Juan</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="ciudad__item ciudad-4">
+				<a href="{% url 'tucupido' %}">
+					
+				<img src="{% static 'images/cities/tucupido.jpg' %}" alt="tucupido">
+					<div class="overlay">
+						<p>Tucupido</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="ciudad__item ciudad-5">
+				<a href="{% url 'zaraza' %}">
+					
+				<img src="{% static 'images/cities/zaraza.jpg' %}" alt="Zaraza">
+					<div class="overlay">
+						<p>Zaraza</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="ciudad__item ciudad-6">
+				<a href="{% url 'altagracia' %}">
+					
+				<img src="{% static 'images/cities/altagracia.jpg' %}" alt="Altagracia de Orituco">
+					<div class="overlay">
+						<p>Altagracia</p>
+					</div>
+				</a>
+			</div>
+			<div class="espaciadol"></div>
+			<div class="ciudad__item ciudad-7" id="ultimaCiudad">
+				<a href="{% url 'calabozo' %}">
+					
+				<img src="{% static 'images/cities/calabozo.jpg' %}" alt="Calabozo">
+					<div class="overlay">
+						<p>Calabozo</p>
+					</div>
+				</a>
+			</div>
+		</section>
+
+
+
+
+	<section class="sectionUltraTabs" id="lugares">
+	<!-- Parques turisticos -->
+	<h1 class="tituloParquesTuristicos">Éstos son algunos parques turisticos que puedes visitar en el estado Guárico</h1>		
+
+
+	<!-- contenedor superior de tabs================= -->
+
+	<div class="contenedorSuperiorTabs">
+			<ul class="tabs" id="ulPadreLi">
+				<li class="tabs__item active">Aguaro Guariquito</li>
+				<li class="tabs__item">Guatopo</li>
+				<li class="tabs__item">Tamanaco</li>
+			</ul>
+			<div class="panel">
+				<div class="panel__item active">
+					<div class="descripcionParque">
+						<h2>Parque Nacional Aguaro Guariquito</h2>
+						<p> &nbsp;&nbsp; El Parque Nacional Aguaro-Guariquito es un parque nacional, ubicado en la región de Los Llanos centrales del sur en el estado Guárico, en Venezuela. Se extiende sobre los municipios de Francisco de Miranda y Las Mercedes. Fue instaurado el 7 de marzo de 1974. Se extiende sobre una superficie de 585.750 hectáreas (5857 km²).</p>
+					</div>
+					{% load static %}
+					<img src="{% static 'images/turistic/aguaro3.jpg' %}" alt="aguaro3">
+
+					<img src="{% static 'images/turistic/aguaro1.jpg' %}" alt="aguaro1">
+						<img src="{% static 'images/turistic/aguaroGuariquito.jpg' %}" alt="aguaroGuariquito">
+					
+				</div>
+				
+				<!-- parque 2 ###################### -->
+				<div class="panel__item">
+						<div class="descripcionParque">
+							<h2>Parque Nacional Guatopo</h2>
+							<p> &nbsp;&nbsp; El Parque Nacional Guatopo es un parque nacional de Venezuela, se encuentra entre los Estados Miranda y Guárico.</p>
+							<p>&nbsp;&nbsp; Se Fundó el 28 de marzo de 1958, antes de esta fecha el lugar tuvo varios dueños hasta que se convirtió en parque Nacional.</p>
+						</div>
+						
+						<img src="{% static 'images/turistic/guatopo3.png' %}" alt="aguaroGuariquito">
+						<img src="{% static 'images/turistic/guatopo.jpg' %}" alt="guatopo">
+							
+						<img src="{% static 'images/turistic/guatopo2.jpg' %}" alt="guatopo">
+						
+					</div>
+
+
+					<!-- parque 3#################### -->
+					<div class="panel__item">
+							<div class="descripcionParque">
+								<h2>Represa de tamanaco</h2>
+								<p> &nbsp;&nbsp; La reserva de agua más grande de Valle de la Pascua es la Represa de Tamanaco, la cual surte del vital líquido luego de ser procesado a toda la población</p>
+								<p>&nbsp;&nbsp; Además, se suele usar como lugar de recreación los fines de semana y dias feriados</p>
+							</div>
+							
+							<img src="{% static 'images/turistic/tamanaco4.jpg' %}" alt="tamanaco">
+							
+							<img src="{% static 'images/turistic/tamanaco.jpg' %}" alt="tamanaco">
+								
+							<img src="{% static 'images/turistic/tamanaco2.jpg' %}" alt="tamanaco">
+							
+						</div>
+				
+			
+			</div>
+		</div>
+	
+	</section>
+	<h1 class="titulo_ubicacion">Ubicación del estado Guárico</h1>
+	{% include "cities/mapa.html" %}
+{% load static %}
+<script src="{% static 'js/portada.js' %}"></script>
+<script src="{% static 'js/tabs.js' %}"></script>
+{% endblock %}

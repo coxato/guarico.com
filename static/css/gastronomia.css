@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+}
+
+html,body{
+	height: 100%;
+}
+
+.portada_gastronomia{
+	height: 100%;
+	background-image: url(../images/food/cubiertos.jpg);
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+	position: relative;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.descripcion_portada_gastronomia{
+	width: 500px;
+	text-align: center;
+	font-family: helvetica;
+	font-size: 1.3em;
+}
+
+.scroll_sign{
+	position: absolute;
+	bottom: 20px;
+	transition: .4s;
+	height: 80px;
+	width: 40px;
+}
+
+.scroll_sign img{
+	width: 100%;
+	animation-name: scroll_senal;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
+	animation-timing-function: ease-in;
+	animation-duration: .7s;
+}
+@keyframes scroll_senal{
+	from{
+		transform: translateY(0px);
+	}
+	to{
+		transform: translateY(50px);
+	}
+}
+
+
+.seccion{
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+.sub_seccion{
+	height: auto;
+	background: #4b6d6d;
+	color: #eef7ff;
+	font-family: arial;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.descripcion_subseccion{
+	text-align: center;
+	width: 80%;
+	padding: 18px 0;
+}
+.descripcion_subseccion h1{
+	font-size: 2.4em;
+}
+.descripcion_subseccion p{
+	font-size: 1.2em;
+}
+
+.fon1{
+	background-image: url('../images/food/pabellon.jpg');
+}
+
+.fon2{
+	background-image: url('../images/food/cachapaConQueso.jpg');
+}
+
+.fon3{
+	background-image: url('../images/food/carneEnVara.jpg');
+}
+
+.fon4{
+	background-image: url('../images/food/chiguire.jpg');
+}
+
+.fon5{
+	background-image: url('../images/food/sancocho.png');
+}
+
+.fon6{
+	background-image: url('../images/food/golfiao.jpg');
+}
+
+.fon7{
+	background-image: url('../images/food/catalinas.jpg');
+}
+
+.fon8{
+	background-image: url('../images/food/besitosDeCoco.jpg');
+}
+
+.conclusion_gastronomia{
+	padding: 20px;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: helvetica;
+	font-size: 1.5em;
+}

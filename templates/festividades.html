@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>festividades que se celebran en Guárico</title>
+	{% load static %}
+<link rel="stylesheet" href="{% static 'css/festividades.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% include "nav.html" %}
+	<div class="espacio_del_nav" style="width: 100%;height: 50px"></div>
+	<section class="titulo_festividades">
+		<h1>Éstas son algunas festividades y actividades populares del estado Guárico</h1>
+	</section>
+	
+	<div class="cont_fest_grid">
+	<section class="festividades_grid">
+	{% load static %}
+	<div class="container_festividad">
+		<div class="adelante b1"></div>
+		<div class="atras b1">
+			<div class="descripcion_festividad">
+				<div><h1>Feria de la Candelaria</h1></div>
+				<div><p>La feria de la virgen de la Candelaria se celebran en la ciudad de Valle de la Pascua Desde 1939. Dieron inicio en diciembre de ese año y se extendió hasta los primeros días del mes de enero de 1940. Se planificó por un grupo de vallepascuenses con la idea de realizar unas ferias como las de las otras ciudades, que brindaran al pueblo un ambiente festivo y se aprovechara la oportunidad de mostrar los productos de la región a los comerciantes y turistas que estuvieran de visita, y de este modo proyectar la economía local.</p></div>
+			</div>
+		</div>
+		</div>
+	<!-- </div> -->
+
+	<div class="container_festividad">
+		<div class="adelante b2"></div>
+		<div class="atras b2">
+			<div class="descripcion_festividad">
+				<div><h1>El baile de Joropo</h1></div>
+				<div><p>El joropo se canta y se baila en toda Venezuela. Constituye no sólo una expresión bailable, sino también una fiesta donde se cantan y bailan corridos, galerones, golpes, pasajes y otras tonalidades folclóricas. Se efectúa en cualquier época del año y el motivo puede ser un bautizo, cumpleaños o la celebración de alguna fiesta patronal. La música del joropo se toca con instrumentos típicos como cuatro, maracas y arpa, que acompañan a cantos y estribillos.</p></div>
+			</div>
+		</div>
+		</div>
+	
+
+	<div class="container_festividad">
+		<div class="adelante b3"></div>
+		<div class="atras b3">
+		<div class="descripcion_festividad">
+			<div><h1>La Burriquita</h1></div>
+		<div><p> El personaje principal de esta danza viste un disfraz que le permite representar burra y jinete al mismo tiempo. Baila al compás de un joropo, hace piruetas, rebuzna y realiza todas las cosas propias de la burra y su jinete.</p></div>
+		</div>
+	</div>
+	</div>
+
+	<div class="container_festividad">
+		<div class="adelante b4"></div>
+		<div class="atras b4">
+			<div class="descripcion_festividad">
+				<div><h1>Velorio de Cruz de mayo</h1></div>
+				<div><p>Fiesta religiosa y social realizada durante el mes de mayo, en donde los recitadores más afamados del país cantan fulías acompañados por música de cuatro, guitarra, maracas, arpa y tambora.</p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container_festividad">
+		<div class="adelante b5"></div>
+		<div class="atras b5">
+			<div class="descripcion_festividad">
+				<div><h1>El coleo</h1></div>
+				<div><p>El coleo es un deporte que se ejecuta en varias partes de Venezuela y por supuesto Guárico. Lo conforma una trilogía de jinete, caballo y toro. El objetivo del jinete consiste en derribar por el suelo al toro jalándole por la cola. Para ser buen coleador se requiere de aptitudes especiales: el jinete debe ser rápido, elástico, de buen pulso y sin miedo.</p></div>
+			</div>
+		</div>
+		</div>
+</section>
+</div>
+
+{% include "footer.html" %}
+{% load static %}
+<script src="{% static 'js/headerMobile.js' %}"></script>
+</body>
+</html>

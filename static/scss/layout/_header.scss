@@ -1,0 +1,113 @@
+
+
+.cabezera{
+    position: fixed;
+    font-family: $fuente2;
+    width: 100%;
+    z-index: 199;
+    height: auto;
+    border-bottom: $black 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(128, 128, 128,.5);
+}
+nav{
+    width: 90%;
+    margin: 0 3%;
+}
+
+.icon-menu{
+    position: fixed;
+    z-index: 999;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    transition: .3s;
+    border-radius: 50%;
+    background-image: url('../images/burguerButton2.png');
+    background-size: cover;
+    display: none;
+    // background: red;
+
+}
+
+
+.menuPrincipal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+    .menuPrincipal a{
+        // border: 1px solid $morado;
+        text-decoration: none;
+        // background: rgba(128, 128, 128, 0.233);
+        padding: 14px 3px;
+        width: 100%;
+        font-size: 19px;
+        font-weight: bold;
+        color: rgb(212, 212, 212);
+        text-align: center;
+        transition: .3s;
+    }
+    .menuPrincipal a:hover{
+        color: white;
+    }
+
+// .menuSecundario{
+    //     position: absolute;
+    //     top: 100%;
+    // }
+    
+    @media screen and (max-width: 620px){
+
+        .icon-menu{
+            display: block;
+
+            &:hover{
+                border-radius: 50%;
+                transform: scale(1.02); 
+            }
+        }
+        .cabezera{
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 0;
+        transition: .4s;
+        background: rgba(0, 0, 0, .9);
+        // border: 2px solid red;
+        padding: 0;
+
+        &.active{
+            left: 0;
+        }
+    }
+
+
+    .menuPrincipal{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+
+        & a{
+            border-bottom: 2px solid blue;
+            width: 100%;
+            
+            &:first-child{
+                border-top: 2px solid blue;
+            }
+        }
+    }
+    .logo{
+        display: none;
+    }
+}
