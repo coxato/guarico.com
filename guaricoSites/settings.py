@@ -28,6 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['carlosedua.pythonanywhere.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [

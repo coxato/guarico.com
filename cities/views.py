@@ -57,7 +57,7 @@ SanJuan = {
 	'name': 'San Juan de los Morros',
 	'apodo': '',
 	'image': '../static/images/catedrales/catredralSanJuan.jpg',
-	'image_portada': '../static/images/cities/sanJuan.jpg',
+	'image_portada': '../static/images/cities/sanJuan4.jpg',
 	'historical_description': 'San Juan de Los Morros, es la capital del Estado Guárico en Venezuela, es prácticamente la puerta de entrada a los Llanos Centrales pero sin llegar a ser propiamente llano. Tiene una geografía muy particular donde prevalecen espectaculares montañas. Su población es de 160.248 habitantes, siendo la segunda ciudad más poblada del estado Guárico después de Calabozo y la primera en densidad de población.',
 	'map_url': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86305.06175451352!2d-67.4153321007081!3d9.900486713631638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2aaa20760411b1%3A0x80d974a28823a010!2sSan+Juan+de+Los+Morros%2C+Gu%C3%A1rico!5e1!3m2!1ses-419!2sve!4v1537079006935'
 }

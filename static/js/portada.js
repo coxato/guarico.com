@@ -51,10 +51,9 @@
 		mostrar(current)
 	}
 
-	setTimeout(()=> setInterval(()=>{
-				next();
-				},7000),
-		4000)
+		setInterval(() => {
+			next();
+		},7000)
 
 	// setTimeout(()=> {
 	// 	setInterval(()=>{
