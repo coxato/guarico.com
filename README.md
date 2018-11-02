@@ -7,6 +7,6 @@ para practicar css y un poquito de Django, asi como también un poco de javascri
 hello, this website is from a state of Venezuela called Guárico, i make the website to practice
 CSS , a little of Django framework and javascript
 
-vé el proyecto en http://carlosedua.pythonanywhere.com
+vé el proyecto en https://carlosedua.pythonanywhere.com
 
-see the project in http://carlosedua.pythonanywhere.com
+see the project in https://carlosedua.pythonanywhere.com
