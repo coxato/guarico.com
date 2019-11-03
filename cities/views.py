@@ -9,7 +9,7 @@ guarico = {
 
 pascua = {
 	'name': 'Valle de La Pascua',
-	'apodo': 'la pricesa del llano',
+	'apodo': 'la princesa del llano',
 	'map_url': 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d86447.28842336252!2d-66.00665738338795!3d9.212289214591927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sve!4v1537062750728',
 	#la imagen está en 'static' 
 	'image': '../static/images/catedrales/catedralPascua.jpg',
@@ -76,7 +76,10 @@ calabozo = {
 template = 'cities/simple_city_template/city_template.html'
 
 def principal_page(request):
-	return render(request,'cities/index.html',{'ciudad_context': guarico})
+	return render(
+		request,
+		'cities/index.html',
+		{'ciudad_context': guarico})
 
 def pascua_page(request):
 	return render(

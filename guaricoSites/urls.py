@@ -24,6 +24,7 @@ from django.views.generic import TemplateView
 from cities import views as cities_views
 
 urlpatterns = [
+
     #admin
     path('admin/', admin.site.urls),
     #ciudades
