@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title_contenido %}
-	<title>Valle de La Pascua</title>
+	<title>{{ciudad_context.name}}</title>
 {% endblock %}
 
 {% block body_contenido %}
@@ -17,7 +17,7 @@
 <div class="superiorHistory">
 		
 		<!-- titulo de la historia de la ciudad -->
-		<h1 class="tituloHistory">acerca de {{ciudad_context.name}}</h1>
+		<h1 class="tituloHistory">Acerca de {{ciudad_context.name}}</h1>
 		
 		<section class="history">
 			<div class="historiaCiudad">
